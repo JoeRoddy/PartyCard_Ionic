@@ -2,22 +2,22 @@
     <ion-content class="padding">
         <div class="list list-inset">
             <label class="item item-input">
-                <input type="text" placeholder="Username">
+                <input type="text" placeholder="Username" ng-model="data.username">
             </label>
             <label class="item item-input">
-                <input type="text" placeholder="Password">
+                <input type="text" placeholder="Password" ng-model="data.password">
             </label>
             <label class="item item-input">
-                <input type="text" placeholder="Bank Account Number">
+                <input type="text" placeholder="Bank Account Number" ng-model="data.accountNumber">
             </label>
             <label class="item item-input">
-                <input type="text" placeholder="E-mail">
+                <input type="text" placeholder="E-mail" ng-model="data.email">
             </label>
             <label class="item item-input">
-                <input type="text" placeholder="Monthly Budget">
+                <input type="text" placeholder="Monthly Budget" ng-model="data.budget">
             </label>
             <label class="item item-input">
-                <input type="text" placeholder="Party Nights">
+                <input type="text" placeholder="Party Nights" ng-model="data.partyNights">
             </label>
             <button class="button button-block button-assertive" ng-click="createAccount()">Create Account</button>
         </div>

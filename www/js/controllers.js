@@ -1,27 +1,37 @@
 angular.module('chat.controllers', [])
 
-    .controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state) {
+    .controller('LoginCtrl', function ($scope, LoginService, $ionicPopup, $state) {
         $scope.data = {};
 
-        $scope.login = function() {
-            LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
+        $scope.login = function () {
+            LoginService.loginUser($scope.data.username, $scope.data.password).success(function (data) {
                 $state.go('tab.budget');
-            }).error(function(data) {
+            }).error(function (data) {
                 var alertPopup = $ionicPopup.alert({
                     title: 'Login failed!',
                     template: 'Please check your credentials!'
                 });
             });
         }
-        $scope.openCreateAccountView=function(){
+        $scope.openCreateAccountView = function () {
             $state.go('createAccount');
         }
     })
-    .controller('CreateAccountCtrl', function ($scope, $window,$state) {
-       $scope.createAccount=function(){
+    .controller('CreateAccountCtrl', function ($scope, $window, $state, CreateAccountService, $ionicPopup) {
+        $scope.data= {};
+
+        $scope.createAccount = function () {
+            CreateAccountService.createUser($scope.data.username, $scope.data.password, $scope.data.accountNumber, $scope.data.email, $scope.data.budget, $scope.data.partyNights).success(function (data) {
+                $state.go('tab.budget');
+            }).error(function (data) {
+                var alertPopup = $ionicPopup.alert({
+                    title: 'Account creation failed!',
+                    template: 'Something went wrong. Check your input.'
+                });
+            });
             console.log('new account created');
             $state.go('tab.budget');
-       }
+        }
     })
     .controller('DashCtrl', function ($scope, $window) {
         $scope.launch = function (url) {
