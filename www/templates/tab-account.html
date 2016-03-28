@@ -1,19 +1,23 @@
 <ion-view view-title="Account Breakdown">
-    <ion-content>
+    <ion-nav-buttons side="right">
+        <button class="button icon ion-gear-a" color="assertive" ng-click="doSomething()"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header padding">
         <div class="list card">
-        <div class="item item-avatar">
-            <img src="/img/wallet.jpeg">
-            <h2>BUDGET REMAINING THIS MONTH</h2>
-            <p ng-bind="date"> Insert days remaining this month </p>
-        </div>
+            <div class="item item-avatar">
+                <img src="/img/wallet.jpeg">
+                <h2>BUDGET REMAINING THIS MONTH</h2>
+                <p> Insert days remaining this month </p>
 
-        <div class="item item-body">
-            <p>
-                <font size="30">$176.71</font>
-            </p>
+            </div>
 
+            <div class="item item-body">
+                <p>
+                    <font size="30">$176.71</font>
+                </p>
+
+            </div>
         </div>
-    </div>
         <div class="list card">
             <div class="item item-avatar">
                 <img src="/img/capital_one.jpg">
