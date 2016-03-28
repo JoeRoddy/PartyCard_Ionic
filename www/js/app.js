@@ -54,13 +54,21 @@ angular.module('chat', ['ionic','chat.controllers', 'chat.services', 'ngCordova'
                     }
                 }
             })
-
             .state('tab.budget',{
                 url: '/budget',
                 views: {
                     'tab-budget':{
                         templateUrl:'templates/tab-budget.html',
                         controller: 'BudgetCtrl'
+                    }
+                }
+            })
+            .state('tab.account', {
+                url: '/account',
+                views: {
+                    'tab-account':{
+                        templateUrl: 'templates/tab-account.html',
+                        controller: 'AccountCtrl'
                     }
                 }
             });

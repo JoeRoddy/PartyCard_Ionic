@@ -23,4 +23,7 @@ angular.module('chat.controllers', [])
     .controller('BudgetCtrl', function ($scope) {
 
     })
+    .controller('AccountCtrl', function ($scope) {
+
+    })
 ;
