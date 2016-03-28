@@ -44,6 +44,7 @@ angular.module('chat', ['ionic', 'ec2-54-174-1-185.compute-1.amazonaws.com:3000'
                 templateUrl: 'templates/login.html',
                 controller: 'LoginCtrl'
             })
+
             .state('tab.dash', {
                 url: '/dash',
                 views: {
@@ -53,49 +54,13 @@ angular.module('chat', ['ionic', 'ec2-54-174-1-185.compute-1.amazonaws.com:3000'
                     }
                 }
             })
-            .state('tab.other', {
-                url: '/other',
-                views: {
-                    'tab-other': {
-                        templateUrl: 'templates/tab-other.html',
-                        controller: 'OtherCtrl'
-                    }
-                }
-            })
-            .state('tab.chat-detail', {
-                url: '/chats/:chatId',
-                views: {
-                    'tab-chats': {
-                        templateUrl: 'templates/chat-detail.html',
-                        controller: 'ChatDetailCtrl'
-                    }
-                }
-            })
-            .state('tab.users', {
-                url: '/users',
-                views: {
-                    'tab-users': {
-                        templateUrl: 'templates/tab-users.html',
-                        controller: 'UserCtrl'
-                    }
-                }
-            })
+
             .state('tab.budget',{
                 url: '/budget',
                 views: {
                     'tab-budget':{
                         templateUrl:'templates/tab-budget.html',
                         controller: 'BudgetCtrl'
-                    }
-                }
-            })
-            .state('tab.account', {
-                cache: false,
-                url: '/account',
-                views: {
-                    'tab-account': {
-                        templateUrl: 'templates/tab-account.html',
-                        controller: 'AccountCtrl'
                     }
                 }
             });
