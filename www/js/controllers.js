@@ -33,6 +33,7 @@ angular.module('chat.controllers', [])
         }
     })
     .controller('DashCtrl', function ($scope, $window) {
+        //launches links from the in-app browser
         $scope.launch = function (url) {
             $window.open(url, "_system", "location=yes");
             return false;
@@ -48,11 +49,14 @@ angular.module('chat.controllers', [])
             return new Date(year, month, 0).getDate();
         }
         var daysThisMonth = daysInMonth(month,year);
-        console.log("days this month: "+daysThisMonth+ "date: "+date);
         $scope.daysRemaining = "Days Remaining: "+(daysThisMonth-date);
 
     })
     .controller('AccountCtrl', function ($scope) {
-
+        $scope.data={};
+        $scope.updateUserInfo=function (){
+            // UpdateInfoService.update($scope.data.budget,$scope.data.partyNights){}
+            console.log($scope.data.budget+$scope.data.partyNights);
+        }
     })
 ;

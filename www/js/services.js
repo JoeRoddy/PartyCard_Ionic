@@ -50,4 +50,17 @@ angular.module('chat.services', [])
                 return promise;
             }
         }
-    });
+    })
+    .factory('CurrentUserService',function(){
+        var currentUser;
+        return{
+            setCurrentUser : function(user){
+                currentUser=user;
+            },
+            getCurrentUser : function(){
+                return currentUser;
+            }
+        }
+    })
+
+;

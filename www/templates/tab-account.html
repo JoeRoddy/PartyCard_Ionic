@@ -1,7 +1,7 @@
 <ion-view view-title="Account Breakdown">
-    <ion-nav-buttons side="right">
+    <!-- <ion-nav-buttons side="right">
         <button class="button icon ion-gear-a color assertive" color="assertive" ng-click="doSomething()"></button>
-    </ion-nav-buttons>
+    </ion-nav-buttons> --->
     <ion-content class="has-header padding">
 
         <div class="list card">
@@ -34,13 +34,13 @@
         <div class="list">
             <label class="item item-input item-stacked-label item-light">
                 <span class="input-label">Current Monthly Budget</span>
-                <input type="text" placeholder="$200.00">
+                <input type="text" placeholder="$200.00" ng-model="data.budget">
             </label>
             <label class="item item-input item-stacked-label item-light">
                 <span class="input-label">Estimated Monthly Party Nights</span>
-                <input type="text" placeholder="6">
+                <input type="text" placeholder="6" ng-model="data.partyNights">
             </label>
-            <button class="button button-assertive" ng-click="updateUserInfo()">Update </button>
+            <button class="button button-assertive" ng-click="updateUserInfo()">Update</button>
         </div>
 
     </ion-content>
