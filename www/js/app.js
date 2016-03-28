@@ -44,6 +44,11 @@ angular.module('chat', ['ionic','chat.controllers', 'chat.services', 'ngCordova'
                 templateUrl: 'templates/login.html',
                 controller: 'LoginCtrl'
             })
+            .state('createAccount', {
+                url: '/createAccount',
+                templateUrl: 'templates/createAccount.html',
+                controller: 'CreateAccountCtrl'
+            })
 
             .state('tab.dash', {
                 url: '/dash',

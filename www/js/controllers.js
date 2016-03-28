@@ -13,6 +13,15 @@ angular.module('chat.controllers', [])
                 });
             });
         }
+        $scope.openCreateAccountView=function(){
+            $state.go('createAccount');
+        }
+    })
+    .controller('CreateAccountCtrl', function ($scope, $window,$state) {
+       $scope.createAccount=function(){
+            console.log('new account created');
+            $state.go('tab.budget');
+       }
     })
     .controller('DashCtrl', function ($scope, $window) {
         $scope.launch = function (url) {
