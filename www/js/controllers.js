@@ -40,7 +40,16 @@ angular.module('chat.controllers', [])
     })
     .controller('BudgetCtrl', function ($scope) {
         var d = new Date();
-        $scope.date = d.getMonth()+"/"+ d.getDate()+"/"+d.getFullYear();
+        var month = d.getMonth()+1;
+        var year = d.getFullYear();
+        var date = d.getDate();
+        $scope.date = month+"/"+ date+"/"+year;
+        function daysInMonth(month,year) {
+            return new Date(year, month, 0).getDate();
+        }
+        var daysThisMonth = daysInMonth(month,year);
+        console.log("days this month: "+daysThisMonth+ "date: "+date);
+        $scope.daysRemaining = "Days Remaining: "+(daysThisMonth-date);
 
     })
     .controller('AccountCtrl', function ($scope) {
