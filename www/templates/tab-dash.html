@@ -1,0 +1,37 @@
+<ion-view view-title="Dashboard" >
+  <ion-content class="padding" >
+
+    <h2>Welcome to Party Card</h2>
+
+    <p>
+
+    Party Card is a financial application that allows you to determine how much money you can afford to spend in a given night.
+    </p>
+    <p>Party Card is built on Ionic and AngularJS.  The back end application's Github repository can be found here:
+     </p>
+     <button ng-click="launch('https://github.com/Zipcoder/PartyCard')" ng-init="count=0" class="icon ion-social-github button button-dark button button-full"></button>
+    <p> About us: </p>
+      <!-- android picture: <p  align="center"><img src="/android_asset/www/img/john.jpg" style="float:left;width:70px;height:70px;"> --->
+      <div id="expand-box-header" class="clearfix">
+          <span style="float: left;">Aiyani Martin</span>
+          <span style="float: right;">Nolan Barth</span>
+      </div>
+      <p align="center"><img src="/img/yani.jpg" style="float:left;width:70px;height:70px;"> <img src="/img/nolan.jpg" style="float:right;width:70px;height:70px;">
+      </p>
+    <div class="button-bar">
+        <button ng-click="launch('https://www.linkedin.com/in/aiyanimartin')" ng-init="count=0" class="icon ion-social-linkedin button button-calm"></button>
+        <button ng-click="launch('https://github.com/infinitumnihilum')" ng-init="count=0" class="icon ion-social-linkedin button button-positive"></button>
+      </div> <p></p>
+      <p>
+      </p>
+      <div id="expand-box-header" class="clearfix">
+          <span style="float: left;">Joe Roddy</span>
+          <span style="float: right;">Rob Kelley</span>
+      </div>
+      <p align="center"><img src="/img/joe_photo.jpg" style="float:left;width:70px;height:70px;"> <img src="/img/rob.jpg" style="float:right;width:70px;height:70px;">
+      <div class="button-bar">
+          <button ng-click="launch('https://www.linkedin.com/in/joe-roddy-78722865')" ng-init="count=0" class="icon ion-social-linkedin button button-positive"></button>
+          <button ng-click="launch('https://www.linkedin.com/in/robertpkelley')" ng-init="count=0" class="icon ion-social-linkedin button button-calm"></button>
+      </div>
+  </ion-content>
+</ion-view>

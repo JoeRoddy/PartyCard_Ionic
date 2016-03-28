@@ -1,0 +1,25 @@
+<ion-view view-title="Settings">
+  <ion-content class="padding">
+    <h2>Welcome to Derp</h2>
+    <p>
+      <ion-toggle ng-model="derpEnabler.checked"
+                    ng-change="derpEnablerChange()">
+          Enable Derps
+      </ion-toggle>
+
+      <ion-toggle ng-model="bullshitEnabler.checked"
+                    ng-change="bullshitEnablerChange()">
+          Enable Jargon
+      </ion-toggle>
+    <h2>Chat Themes</h2>
+    <ion-list>
+      <ion-radio ng-repeat="item in themeList"
+                 ng-value="item.value"
+                 ng-model="themeChoice.theme"
+                 ng-change="themeChanger(item.value)"
+                 style="color:{{item.col}};">
+        {{ item.text }}
+      </ion-radio>
+    </ion-list>
+  </ion-content>
+</ion-view>
