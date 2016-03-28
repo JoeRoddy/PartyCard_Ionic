@@ -18,7 +18,7 @@ angular.module('chat.controllers', [])
         }
     })
     .controller('CreateAccountCtrl', function ($scope, $window, $state, CreateAccountService, $ionicPopup) {
-        $scope.data= {};
+        $scope.data = {};
 
         $scope.createAccount = function () {
             CreateAccountService.createUser($scope.data.username, $scope.data.password, $scope.data.accountNumber, $scope.data.email, $scope.data.budget, $scope.data.partyNights).success(function (data) {
@@ -29,7 +29,6 @@ angular.module('chat.controllers', [])
                     template: 'Something went wrong. Check your input.'
                 });
             });
-            console.log('new account created');
             $state.go('tab.budget');
         }
     })
@@ -40,6 +39,8 @@ angular.module('chat.controllers', [])
         }
     })
     .controller('BudgetCtrl', function ($scope) {
+        var d = new Date();
+        $scope.date = d.getMonth()+"/"+ d.getDate()+"/"+d.getFullYear();
 
     })
     .controller('AccountCtrl', function ($scope) {
